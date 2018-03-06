@@ -10,6 +10,7 @@ a.btn{
 	background-color: #FF7F50;
 }
 
-col-xs-12.courseTitle{
+.course{
 	background-color: #FF7F50;
+	border-collapse:collapse;
 }
