@@ -1,25 +1,20 @@
 extends layout
 
+include _includes/sharedHTMLfunctions
+
 block content
 	#banner.page-header
 		.row
 			.col-med-2
-				h1 Course Organizer
-					small &nbsp; All your assignments in one place!
+				h1= pageHeader.title
+					small &nbsp; #{pageHeader.strapline}
 	.row
 		.col-xs-12.col-sm-8
 			.row.list-group
-				.col-xs-12.list-group-item(style="background-color:#FFFFFF;color:#000000;")
-					h4
-						a(href="/course") MATH-335
-						small &nbsp; Ashlyn Munson
-					p Introduction to Statistics
-				.col-xs-12.col-sm-4
-				p
-				p
-				.col-xs-12.list-group-item(style="background-color:#FFFFFF;color:#000000;")
-					h4
-						a(href="/course") CSCI-446
-						small &nbsp; Cyndi Rader
-					p Web Applications
-				.col-xs-12.col-sm-4
+				each c in courselist
+					.col-xs-12.list-group-item(style="background-color:#FFFFFF;color:#000000;margin:5px;")
+						h4
+							a(href="/course")= c.courseId
+							small &nbsp; #{c.professor}
+						p #{c.courseName}
+					.col-xs-12.col-sm-4
