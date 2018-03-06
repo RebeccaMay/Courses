@@ -46,5 +46,9 @@ module.exports.courseInfo = function(req, res){
 };
 
 module.exports.addHw = function(req, res){
-	res.render('course-hw-form', {title: 'Add Assignment'});
+	res.render('course-hw-form', {
+		title: 'Add Assignment',
+		pageHeader: {title: 'Add Assignment'},
+		courseId: 'CSCI-446'
+		});
 };
