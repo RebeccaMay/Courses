@@ -13,4 +13,6 @@ a.btn{
 .course{
 	background-color: #FF7F50;
 	border-collapse:collapse;
+	margin: 0px;
+	border-radius: 5px;
 }
