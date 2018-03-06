@@ -4,36 +4,24 @@ block content
 	#banner.page-header
 		.row
 			.col-med-2
-				h1 MATH-335: Introduction to Statistics 
+				h1= pageHeader.title + ': ' + courseInfo.courseName 
 					small &nbsp; Course Info
 	.row
-		p Instructor: Ashlyn Munson
-		p Credits: 3
-		p When & Where: MWF 9am
+		p Instructor: #{courseInfo.professor}
+		p Credits: #{courseInfo.credits}
+		p When & Where: #{courseInfo.times}
 		a.btn(href='/course/hw/new') Add Assignment
 		p
 	.row
-		.col-xs-12.col-sm-8
-				.course
-					.col-xs-12
-						h4
-							a HW1
-							small &nbsp; Chapter 1
-				.col-xs-12(style="background-color:#FFFFFF;color:#000000;border-radius:5px;")
-					p Due Date: Jan 17, 2018
-					p Points: 20
-					p Status: Graded
-				.col-xs-12.col-sm-4
-				
-		.col-xs-12.col-sm-8		
-				.course
-					.col-xs-12
-						h4
-							a HW2
-							small &nbsp; Chapter 2
-				.col-xs-12(style="background-color:#FFFFFF;color:#000000;border-radius:5px;")
-					p Due Date: Jan 24, 2018
-					p Points: 20
-					p Status: Completed
-				.col-xs-12.col-sm-4
-
+		each assignment in assignments
+			.col-xs-12.col-sm-8
+					.course
+						.col-xs-12
+							h4
+								a #{assignment.hwName}
+								small &nbsp; #{assignment.hwDescription}
+					.col-xs-12(style="background-color:#FFFFFF;color:#000000;border-radius:5px;")
+						p Due Date: #{assignment.dueDate}
+						p Points: #{assignment.points}
+						p Status: #{assignment.hwStatus}
+					.col-xs-12.col-sm-4
