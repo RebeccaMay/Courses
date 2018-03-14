@@ -1,0 +1,101 @@
+2018-03-14T01:15:06.053861+00:00 app[web.1]:     at Socket.emit (events.js:211:7)
+2018-03-14T01:15:06.053862+00:00 app[web.1]:     at addChunk (_stream_readable.js:263:12)
+2018-03-14T01:15:06.053864+00:00 app[web.1]:     at readableAddChunk (_stream_readable.js:250:11)
+2018-03-14T01:15:06.053865+00:00 app[web.1]:     at Socket.Readable.push (_stream_readable.js:208:10)
+2018-03-14T01:15:06.053987+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+2018-03-14T01:15:06.054085+00:00 app[web.1]: (node:20) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+2018-03-14T01:15:06.053866+00:00 app[web.1]:     at TCP.onread (net.js:607:20)
+2018-03-14T01:15:06.238122+00:00 heroku[web.1]: State changed from starting to up
+2018-03-14T01:15:08.817781+00:00 app[web.1]: [0mGET / [32m200 [0m382.547 ms - 1853[0m
+2018-03-14T01:15:08.995472+00:00 app[web.1]: [0mGET /bootstrap/css/amelia.bootstrap.css [32m200 [0m5.041 ms - 127149[0m
+2018-03-14T01:15:08.818714+00:00 heroku[router]: at=info method=GET path="/" host=stormy-refuge-78946.herokuapp.com request_id=ed843564-ddff-4270-a4a8-e0a6db6c977c fwd="138.67.194.147" dyno=web.1 connect=1ms service=394ms status=200 bytes=2056 protocol=https
+2018-03-14T01:15:09.009624+00:00 heroku[router]: at=info method=GET path="/bootstrap/css/amelia.bootstrap.css" host=stormy-refuge-78946.herokuapp.com request_id=5b395872-0958-4dd5-918c-95da054e8ee5 fwd="138.67.194.147" dyno=web.1 connect=1ms service=22ms status=200 bytes=127441 protocol=https
+2018-03-14T01:15:09.089011+00:00 heroku[router]: at=info method=GET path="/stylesheets/style.css" host=stormy-refuge-78946.herokuapp.com request_id=e7e27cad-4f2a-416a-be81-cd1efe49a162 fwd="138.67.194.147" dyno=web.1 connect=2ms service=5ms status=200 bytes=546 protocol=https
+2018-03-14T01:15:09.121128+00:00 heroku[router]: at=info method=GET path="/bootstrap/js/bootstrap.min.js" host=stormy-refuge-78946.herokuapp.com request_id=37eb5721-c405-4218-b067-ac7221e6be5f fwd="138.67.194.147" dyno=web.1 connect=3ms service=33ms status=200 bytes=49233 protocol=https
+2018-03-14T01:15:09.238745+00:00 heroku[router]: at=info method=GET path="/javascripts/jquery-1.11.1.min.js" host=stormy-refuge-78946.herokuapp.com request_id=c37f0b1f-7e5c-40d8-8e1b-6f714a8876fc fwd="138.67.194.147" dyno=web.1 connect=1ms service=3ms status=404 bytes=1292 protocol=https
+2018-03-14T01:15:09.117369+00:00 heroku[router]: at=info method=GET path="/javascripts/jquery-1.11.1.min.js" host=stormy-refuge-78946.herokuapp.com request_id=c0346ed5-fcbf-49ea-b1b5-adaa78acb008 fwd="138.67.194.147" dyno=web.1 connect=1ms service=32ms status=404 bytes=1292 protocol=https
+2018-03-14T01:15:09.087003+00:00 app[web.1]: [0mGET /stylesheets/style.css [32m200 [0m2.020 ms - 259[0m
+2018-03-14T01:15:09.115934+00:00 app[web.1]: [0mGET /javascripts/jquery-1.11.1.min.js [33m404 [0m27.888 ms - 1082[0m
+2018-03-14T01:15:09.118175+00:00 app[web.1]: [0mGET /bootstrap/js/bootstrap.min.js [32m200 [0m0.747 ms - 48944[0m
+2018-03-14T01:15:09.236327+00:00 app[web.1]: [0mGET /javascripts/jquery-1.11.1.min.js [33m404 [0m1.061 ms - 1082[0m
+2018-03-14T01:15:11.478664+00:00 heroku[router]: at=info method=GET path="/course" host=stormy-refuge-78946.herokuapp.com request_id=d8fcf17c-d18e-48c6-90a2-ee1b6d3d94c5 fwd="138.67.194.147" dyno=web.1 connect=1ms service=64ms status=200 bytes=2328 protocol=https
+2018-03-14T01:15:11.578443+00:00 heroku[router]: at=info method=GET path="/bootstrap/js/bootstrap.min.js" host=stormy-refuge-78946.herokuapp.com request_id=f4b371ed-4df6-4683-8359-e1fe002fa221 fwd="138.67.194.147" dyno=web.1 connect=1ms service=6ms status=304 bytes=238 protocol=https
+2018-03-14T01:15:11.573290+00:00 heroku[router]: at=info method=GET path="/stylesheets/style.css" host=stormy-refuge-78946.herokuapp.com request_id=c0a11613-97e3-4a24-b67b-562fc284cae2 fwd="138.67.194.147" dyno=web.1 connect=1ms service=6ms status=304 bytes=237 protocol=https
+2018-03-14T01:15:11.476252+00:00 app[web.1]: [0mGET /course [32m200 [0m61.625 ms - 2125[0m
+2018-03-14T01:15:11.568498+00:00 app[web.1]: [0mGET /bootstrap/css/amelia.bootstrap.css [36m304 [0m2.234 ms - -[0m
+2018-03-14T01:15:11.572164+00:00 app[web.1]: [0mGET /stylesheets/style.css [36m304 [0m1.204 ms - -[0m
+2018-03-14T01:15:11.683262+00:00 app[web.1]: [0mGET /javascripts/jquery-1.11.1.min.js [33m404 [0m1.797 ms - 1082[0m
+2018-03-14T01:15:11.574869+00:00 app[web.1]: [0mGET /javascripts/jquery-1.11.1.min.js [33m404 [0m3.497 ms - 1082[0m
+2018-03-14T01:15:11.576696+00:00 app[web.1]: [0mGET /bootstrap/js/bootstrap.min.js [36m304 [0m0.595 ms - -[0m
+2018-03-14T01:15:11.684530+00:00 heroku[router]: at=info method=GET path="/javascripts/jquery-1.11.1.min.js" host=stormy-refuge-78946.herokuapp.com request_id=a44a09a1-c52b-4f98-8fb1-f4f4cbc99165 fwd="138.67.194.147" dyno=web.1 connect=1ms service=6ms status=404 bytes=1292 protocol=https
+2018-03-14T01:15:11.569931+00:00 heroku[router]: at=info method=GET path="/bootstrap/css/amelia.bootstrap.css" host=stormy-refuge-78946.herokuapp.com request_id=42326722-c585-4c5d-87b9-4b37d1a30733 fwd="138.67.194.147" dyno=web.1 connect=1ms service=5ms status=304 bytes=239 protocol=https
+2018-03-14T01:15:11.576727+00:00 heroku[router]: at=info method=GET path="/javascripts/jquery-1.11.1.min.js" host=stormy-refuge-78946.herokuapp.com request_id=da195baf-16fe-41f9-b0a2-512026f1c6bd fwd="138.67.194.147" dyno=web.1 connect=1ms service=7ms status=404 bytes=1292 protocol=https
+2018-03-14T01:23:01.000000+00:00 app[api]: Build started by user remay@mines.edu
+2018-03-14T01:23:25.752783+00:00 heroku[web.1]: Restarting
+2018-03-14T01:23:25.754923+00:00 heroku[web.1]: State changed from up to starting
+2018-03-14T01:23:26.721638+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2018-03-14T01:23:26.811076+00:00 heroku[web.1]: Process exited with status 143
+2018-03-14T01:23:25.479576+00:00 app[api]: Deploy daf360d3 by user remay@mines.edu
+2018-03-14T01:23:25.479576+00:00 app[api]: Release v14 created by user remay@mines.edu
+2018-03-14T01:23:01.000000+00:00 app[api]: Build succeeded
+2018-03-14T01:23:29.573908+00:00 heroku[web.1]: Starting process with command `npm start`
+2018-03-14T01:23:31.528828+00:00 app[web.1]: 
+2018-03-14T01:23:31.528846+00:00 app[web.1]: > locer@0.0.0 start /app
+2018-03-14T01:23:31.528848+00:00 app[web.1]: > node ./bin/www
+2018-03-14T01:23:31.528849+00:00 app[web.1]: 
+2018-03-14T01:23:32.053545+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Error: URL malformed, cannot be parsed
+2018-03-14T01:23:32.053573+00:00 app[web.1]:     at module.exports (/app/node_modules/mongodb/lib/url_parser.js:17:21)
+2018-03-14T01:23:32.053575+00:00 app[web.1]:     at Promise (/app/node_modules/mongoose/lib/connection.js:338:5)
+2018-03-14T01:23:32.053577+00:00 app[web.1]:     at new Promise (<anonymous>)
+2018-03-14T01:23:32.053579+00:00 app[web.1]:     at NativeConnection.Connection.openUri (/app/node_modules/mongoose/lib/connection.js:337:19)
+2018-03-14T01:23:32.053581+00:00 app[web.1]:     at Mongoose.connect (/app/node_modules/mongoose/lib/index.js:207:15)
+2018-03-14T01:23:32.053583+00:00 app[web.1]:     at Object.<anonymous> (/app/app_server/models/db.js:8:10)
+2018-03-14T01:23:32.053584+00:00 app[web.1]:     at Module._compile (module.js:652:30)
+2018-03-14T01:23:32.053586+00:00 app[web.1]:     at Object.Module._extensions..js (module.js:663:10)
+2018-03-14T01:23:32.053587+00:00 app[web.1]:     at Module.load (module.js:565:32)
+2018-03-14T01:23:32.053589+00:00 app[web.1]:     at tryModuleLoad (module.js:505:12)
+2018-03-14T01:23:32.053591+00:00 app[web.1]:     at Function.Module._load (module.js:497:3)
+2018-03-14T01:23:32.053592+00:00 app[web.1]:     at Module.require (module.js:596:17)
+2018-03-14T01:23:32.053594+00:00 app[web.1]:     at require (internal/module.js:11:18)
+2018-03-14T01:23:32.053595+00:00 app[web.1]:     at Object.<anonymous> (/app/app.js:7:1)
+2018-03-14T01:23:32.053597+00:00 app[web.1]:     at Module._compile (module.js:652:30)
+2018-03-14T01:23:32.053599+00:00 app[web.1]:     at Object.Module._extensions..js (module.js:663:10)
+2018-03-14T01:23:32.054405+00:00 app[web.1]: (node:20) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)
+2018-03-14T01:23:32.054694+00:00 app[web.1]: (node:20) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+2018-03-14T01:23:32.526916+00:00 heroku[web.1]: State changed from starting to up
+2018-03-14T01:28:13.979337+00:00 heroku[router]: at=info method=GET path="/" host=stormy-refuge-78946.herokuapp.com request_id=eef516c5-7443-4552-8eab-5e7ce81a2ab9 fwd="138.67.194.147" dyno=web.1 connect=0ms service=372ms status=304 bytes=151 protocol=https
+2018-03-14T01:28:13.979319+00:00 app[web.1]: [0mGET / [36m304 [0m362.707 ms - -[0m
+2018-03-14T01:28:14.165105+00:00 app[web.1]: [0mGET /bootstrap/css/amelia.bootstrap.css [32m200 [0m6.101 ms - 127149[0m
+2018-03-14T01:28:14.273600+00:00 heroku[router]: at=info method=GET path="/javascripts/jquery-1.11.1.min.js" host=stormy-refuge-78946.herokuapp.com request_id=b29f5dfa-7b80-4bd9-b9a0-8950d998b9eb fwd="138.67.194.147" dyno=web.1 connect=0ms service=28ms status=404 bytes=1292 protocol=https
+2018-03-14T01:28:14.276944+00:00 heroku[router]: at=info method=GET path="/bootstrap/js/bootstrap.min.js" host=stormy-refuge-78946.herokuapp.com request_id=d4b3792e-43ce-438c-b650-51c97924c779 fwd="138.67.194.147" dyno=web.1 connect=0ms service=30ms status=200 bytes=49233 protocol=https
+2018-03-14T01:28:14.170194+00:00 heroku[router]: at=info method=GET path="/bootstrap/css/amelia.bootstrap.css" host=stormy-refuge-78946.herokuapp.com request_id=74de1ea7-7107-43ba-970a-b4aaeb660b85 fwd="138.67.194.147" dyno=web.1 connect=0ms service=19ms status=200 bytes=127441 protocol=https
+2018-03-14T01:28:14.249592+00:00 heroku[router]: at=info method=GET path="/stylesheets/style.css" host=stormy-refuge-78946.herokuapp.com request_id=c3a36369-3be0-4155-8d11-3b2b1f35f351 fwd="138.67.194.147" dyno=web.1 connect=0ms service=4ms status=200 bytes=546 protocol=https
+2018-03-14T01:28:14.273151+00:00 app[web.1]: [0mGET /bootstrap/js/bootstrap.min.js [32m200 [0m0.686 ms - 48944[0m
+2018-03-14T01:28:14.247146+00:00 app[web.1]: [0mGET /stylesheets/style.css [32m200 [0m2.161 ms - 259[0m
+2018-03-14T01:28:14.271445+00:00 app[web.1]: [0mGET /javascripts/jquery-1.11.1.min.js [33m404 [0m25.026 ms - 1082[0m
+2018-03-14T01:28:14.393240+00:00 app[web.1]: [0mGET /javascripts/jquery-1.11.1.min.js [33m404 [0m0.670 ms - 1082[0m
+2018-03-14T01:28:14.395299+00:00 heroku[router]: at=info method=GET path="/javascripts/jquery-1.11.1.min.js" host=stormy-refuge-78946.herokuapp.com request_id=bf9e94d3-709e-490c-a259-b44038e0478e fwd="138.67.194.147" dyno=web.1 connect=0ms service=2ms status=404 bytes=1292 protocol=https
+2018-03-14T01:34:39.288608+00:00 heroku[router]: at=info method=GET path="/" host=stormy-refuge-78946.herokuapp.com request_id=b5cd5ad3-99e6-4403-8d26-b87cdff2c32f fwd="138.67.194.147" dyno=web.1 connect=1ms service=2ms status=304 bytes=151 protocol=https
+2018-03-14T01:34:39.401845+00:00 heroku[router]: at=info method=GET path="/stylesheets/style.css" host=stormy-refuge-78946.herokuapp.com request_id=5f364e32-4a2c-4360-bd09-34ac40c2b666 fwd="138.67.194.147" dyno=web.1 connect=1ms service=2ms status=304 bytes=237 protocol=https
+2018-03-14T01:34:39.446111+00:00 heroku[router]: at=info method=GET path="/javascripts/jquery-1.11.1.min.js" host=stormy-refuge-78946.herokuapp.com request_id=a8152cb9-d365-4604-9c5c-ce1236a468a3 fwd="138.67.194.147" dyno=web.1 connect=1ms service=3ms status=404 bytes=1292 protocol=https
+2018-03-14T01:34:39.448761+00:00 heroku[router]: at=info method=GET path="/bootstrap/js/bootstrap.min.js" host=stormy-refuge-78946.herokuapp.com request_id=606a8148-7e1c-4771-bf2e-e01316f28067 fwd="138.67.194.147" dyno=web.1 connect=1ms service=3ms status=304 bytes=238 protocol=https
+2018-03-14T01:34:39.286365+00:00 app[web.1]: [0mGET / [36m304 [0m0.788 ms - -[0m
+2018-03-14T01:34:39.352736+00:00 app[web.1]: [0mGET /bootstrap/css/amelia.bootstrap.css [36m304 [0m0.747 ms - -[0m
+2018-03-14T01:34:39.399586+00:00 app[web.1]: [0mGET /stylesheets/style.css [36m304 [0m0.572 ms - -[0m
+2018-03-14T01:34:39.444023+00:00 app[web.1]: [0mGET /javascripts/jquery-1.11.1.min.js [33m404 [0m1.322 ms - 1082[0m
+2018-03-14T01:34:39.444520+00:00 app[web.1]: [0mGET /bootstrap/js/bootstrap.min.js [36m304 [0m1.388 ms - -[0m
+2018-03-14T01:34:39.354994+00:00 heroku[router]: at=info method=GET path="/bootstrap/css/amelia.bootstrap.css" host=stormy-refuge-78946.herokuapp.com request_id=495e32d8-6570-4ad9-9cbf-0161d4ebeacb fwd="138.67.194.147" dyno=web.1 connect=1ms service=2ms status=304 bytes=239 protocol=https
+2018-03-14T01:34:39.550071+00:00 app[web.1]: [0mGET /javascripts/jquery-1.11.1.min.js [33m404 [0m0.509 ms - 1082[0m
+2018-03-14T01:34:39.552104+00:00 heroku[router]: at=info method=GET path="/javascripts/jquery-1.11.1.min.js" host=stormy-refuge-78946.herokuapp.com request_id=9a304352-839f-47f6-b358-411a086bc06f fwd="138.67.194.147" dyno=web.1 connect=1ms service=2ms status=404 bytes=1292 protocol=https
+2018-03-14T01:38:01.284380+00:00 app[web.1]: [0mGET / [36m304 [0m0.567 ms - -[0m
+2018-03-14T01:38:01.353166+00:00 app[web.1]: [0mGET /bootstrap/css/amelia.bootstrap.css [36m304 [0m0.352 ms - -[0m
+2018-03-14T01:38:01.406040+00:00 app[web.1]: [0mGET /stylesheets/style.css [36m304 [0m0.394 ms - -[0m
+2018-03-14T01:38:01.454248+00:00 app[web.1]: [0mGET /bootstrap/js/bootstrap.min.js [36m304 [0m0.331 ms - -[0m
+2018-03-14T01:38:01.458311+00:00 app[web.1]: [0mGET /javascripts/jquery-1.11.1.min.js [33m404 [0m1.309 ms - 1082[0m
+2018-03-14T01:38:01.287685+00:00 heroku[router]: at=info method=GET path="/" host=stormy-refuge-78946.herokuapp.com request_id=da200510-16ed-4a25-abff-d2d3b3da9ee2 fwd="138.67.194.147" dyno=web.1 connect=2ms service=4ms status=304 bytes=151 protocol=https
+2018-03-14T01:38:01.355577+00:00 heroku[router]: at=info method=GET path="/bootstrap/css/amelia.bootstrap.css" host=stormy-refuge-78946.herokuapp.com request_id=113f71a8-ffd2-4ac7-9d6b-8db82f1606d2 fwd="138.67.194.147" dyno=web.1 connect=2ms service=2ms status=304 bytes=239 protocol=https
+2018-03-14T01:38:01.408426+00:00 heroku[router]: at=info method=GET path="/stylesheets/style.css" host=stormy-refuge-78946.herokuapp.com request_id=c157cbff-bfa3-4cf6-98b3-1f464c2e2f65 fwd="138.67.194.147" dyno=web.1 connect=1ms service=2ms status=304 bytes=237 protocol=https
+2018-03-14T01:38:01.456504+00:00 heroku[router]: at=info method=GET path="/bootstrap/js/bootstrap.min.js" host=stormy-refuge-78946.herokuapp.com request_id=2f0ae56e-403a-498b-99cc-6913d5c45123 fwd="138.67.194.147" dyno=web.1 connect=1ms service=2ms status=304 bytes=238 protocol=https
+2018-03-14T01:38:01.460136+00:00 heroku[router]: at=info method=GET path="/javascripts/jquery-1.11.1.min.js" host=stormy-refuge-78946.herokuapp.com request_id=9f241e13-f421-4aaa-a483-df1d7f65d1ba fwd="138.67.194.147" dyno=web.1 connect=2ms service=4ms status=404 bytes=1292 protocol=https
+2018-03-14T01:38:01.546828+00:00 app[web.1]: [0mGET /javascripts/jquery-1.11.1.min.js [33m404 [0m0.477 ms - 1082[0m
+2018-03-14T01:38:01.549072+00:00 heroku[router]: at=info method=GET path="/javascripts/jquery-1.11.1.min.js" host=stormy-refuge-78946.herokuapp.com request_id=fb661866-ca49-4922-aaa8-8b6e13f57687 fwd="138.67.194.147" dyno=web.1 connect=2ms service=4ms status=404 bytes=1292 protocol=https
