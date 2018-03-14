@@ -20,3 +20,13 @@ db.courses.save({
 		hwStatus: 'Completed'	
 	}]
 })
+
+db.courses.save({
+    courseId: 'CSCI-446',
+	professor: 'Cyndi Rader',
+    courseName: 'Web Applications',
+	courseTime: {
+		times: 'Online',
+		credits: 3
+	}
+})

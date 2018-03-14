@@ -1,7 +1,10 @@
 var mongoose = require('mongoose');
 
-var dbURI = 'mongodb://localhost/Courses';
-mongoose.connect(dbURI, { useMongoClient: true })
+var dbURI = 'mongodb://localhost/courses';
+if (process.env.NODE_ENV === 'production') {
+	dbURI = 'mongodb://remay:csci446@ds213239.mlab.com:13239/heroku_1mld417';
+}
+mongoose.connect(dbURI)
 
 mongoose.connection.on('connected', function () {
 	console.log('Mongoose connected to ' + dbURI);
