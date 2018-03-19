@@ -28,6 +28,7 @@ module.exports.assignmentsReadOne = function (req, res) {
 				}
 				if (course.assignments && course.assignments.length > 0) {
 					assignment = course.assignments.id(req.params.assignmentid);
+					//5aaf5963a1110fca8b7afa80
 					if (!assignment) {
 						sendJsonResponse(res, 404, {
 							"message": "assignmentid not found"

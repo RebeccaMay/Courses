@@ -7,14 +7,14 @@ db.courses.save({
 		credits: 3
 	},
 	assignments: [{
-		id: ObjectId(),
+		_id: ObjectId(),
 		hwName: 'HW1',
 		hwDescription: 'Chapter 1',
 		dueDate: 'Jan 17, 2018',
 		points: 20,
 		hwStatus: 'Graded'
 	}, {
-		id: ObjectId(),
+		_id: ObjectId(),
 		hwName: 'HW2',
 		hwDescription: 'Chapter 2',
 		dueDate: 'Jan 24, 2018',
