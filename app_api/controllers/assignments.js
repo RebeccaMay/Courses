@@ -37,7 +37,7 @@ module.exports.assignmentsCreate = function (req, res) {
 		if (courseId) {
 			Cour
 				.findById(courseId)
-				.select('assingments')
+				.select('assignments')
 				.exec(
 					function(err, course) {
 						if (err) {
@@ -109,7 +109,7 @@ module.exports.assignmentsUpdateOne = function (req, res) {
 	}
 	Cour
 		.findById(req.params.courseId)
-		.select('assingments')
+		.select('assignments')
 		.exec(
 		function(err, course) {
 			var thisAssignment;
@@ -152,45 +152,44 @@ module.exports.assignmentsUpdateOne = function (req, res) {
 };	
 
 module.exports.assignmentsDeleteOne = function (req, res) {
-	if (!req.params.locationid || !req.params.reviewid) {
+	if (!req.params.courseId || !req.params.assignmentid) {
 		sendJsonResponse(res, 404, {
-			"message": "Not found, locationid and reviewid are both required"
+			"message": "Not found, courseId and assignmentid are both required"
 		});
 		return;
 	}
-	Loc
-		.findById(req.params.locationid)
-		.select('reviews')
+	Cour
+		.findById(req.params.courseId)
+		.select('assignments')
 		.exec(
-		function(err, location) {
-			if (!location) {
+		function(err, course) {
+			if (!course) {
 				sendJsonResponse(res, 404, {
-					"message": "locationid not found"
+					"message": "courseId not found"
 				});
 				return;
 			} else if (err) {
 				sendJsonResponse(res, 400, err);
 				return;
 			}
-			if (location.reviews && location.reviews.length > 0) {
-				if (!location.reviews.id(req.params.reviewid)) {
+			if (course.assignments && course.assignments.length > 0) {
+				if (!course.assignments.id(req.params.assignmentid)) {
 					sendJsonResponse(res, 404, {
-						"message": "reviewid not found"
+						"message": "assignmentid not found"
 					});
 				} else {
-					location.reviews.id(req.params.reviewid).remove();
-					location.save(function(err) {
+					course.reviews.id(req.params.assignmentid).remove();
+					course.save(function(err) {
 						if (err) {
 							sendJsonResponse(res, 404, err);
 						} else {
-							updateAverageRating(location._id);
 							sendJsonResponse(res, 204, null);
 						}
 					});
 				}
 			} else {
 				sendJsonResponse(res, 404, {
-					"message": "No review to delete"
+					"message": "No assignment to delete"
 				});
 			}
 		}

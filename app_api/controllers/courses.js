@@ -6,9 +6,19 @@ var sendJsonResponse = function(res, status, content) {
 	res.json(content);
 };
 
-module.exports.coursesList = function (req, res) {
-	sendJsonResponse(res, 200, {"status" : "success"});		
+module.exports.coursesList = function(req, res) {
+	Cour
+		.find({}, function(err, courses){
+			if (err){
+				sendJsonResponse(res, 404, err);
+				return;
+			}
+			else {
+				sendJsonResponse(res, 200, courses);
+			}
+		});
 };
+
 
 module.exports.coursesReadOne = function(req, res) {
 	if (req.params && req.params.courseId) {
