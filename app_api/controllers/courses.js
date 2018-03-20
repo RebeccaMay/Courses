@@ -6,10 +6,6 @@ var sendJsonResponse = function(res, status, content) {
 	res.json(content);
 };
 
-module.exports.coursesCreate = function (req, res) {
-	sendJsonResponse(res, 200, {"status" : "success"});		
-};
-
 module.exports.coursesList = function (req, res) {
 	sendJsonResponse(res, 200, {"status" : "success"});		
 };
@@ -35,12 +31,4 @@ module.exports.coursesReadOne = function(req, res) {
 			"message": "No courseId in request"
 		});
 	}
-};
-
-module.exports.coursesUpdateOne = function (req, res) {
-	sendJsonResponse(res, 200, {"status" : "success"});		
-};
-
-module.exports.coursesDeleteOne = function (req, res) {
-	sendJsonResponse(res, 200, {"status" : "success"});		
 };

@@ -14,7 +14,7 @@ var courseTimeSchema = new mongoose.Schema({
 });
 
 var courseSchema = new mongoose.Schema({ 
-	courseID: {type: String, required: true},
+	courseId: {type: String, required: true},
 	professor: String,
 	courseName: {type: String, required: true},
 	courseTime: [courseTimeSchema],

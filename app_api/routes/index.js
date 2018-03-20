@@ -6,10 +6,7 @@ var ctrlAssignments = require('../controllers/assignments');
 
 // courses
 router.get('/courses', ctrlCourses.coursesList);
-router.post('/courses', ctrlCourses.coursesCreate);
 router.get('/courses/:courseId', ctrlCourses.coursesReadOne);
-router.put('/courses/:courseId', ctrlCourses.coursesUpdateOne);
-router.delete('/courses/:courseId', ctrlCourses.coursesDeleteOne);
 
 
 // asssignments
