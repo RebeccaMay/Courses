@@ -11,7 +11,7 @@ router.get('/courses/:courseId', ctrlCourses.coursesReadOne);
 
 // asssignments
 router.post('/courses/:courseId/assignments', ctrlAssignments.assignmentsCreate);
-router.get('/courses/:courseId/assignments/:assignmentid', ctrlAssignments.assignmentsReadOne);
+router.get('/courses/:courseId/assignments', ctrlAssignments.assignmentsReadAll);
 router.put('/courses/:courseId/assignments/:assignmentid', ctrlAssignments.assignmentsUpdateOne);
 router.delete('/courses/:courseId/assignments/:assignmentid', ctrlAssignments.assignmentsDeleteOne);
 

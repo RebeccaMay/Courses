@@ -54,45 +54,17 @@ module.exports.assignmentsCreate = function (req, res) {
 		}	
 };
 
-module.exports.assignmentsReadOne = function (req, res) {
+module.exports.assignmentsReadAll = function (req, res) {
 	if (req.params && req.params.courseId) {
+		var assignments = [];
 		Cour
 			.findById(req.params.courseId)
-			.select('courseName assignments')
-			.exec(function(err, course) {
-				var response, assignment;
-				if (!course) {
-					sendJsonResponse(res, 404, {
-						"message": "course Id not found"
-					});
-					return;
-				} else if (err) {
-					sendJsonResponse(res, 404, err);
-					return;
-				}
-				if (course.assignments && course.assignments.length > 0) {
-					assignment = course.assignments.id(req.params.assignmentid);
-					if (!assignment) {
-						sendJsonResponse(res, 404, {
-							"message": "assignmentid not found"
-						});
-					} else {
-						response = {
-							course : {
-								name : course.courseName,
-								id : req.params.courseId
-							},
-							assignment : assignment
-						};
-						sendJsonResponse(res, 200, response);
-					}
-				} else {
-					sendJsonResponse(res, 404, {
-						"message": "No assignments found"
-					});
-				}
-				sendJsonResponse(res, 200, course);
+			.select('assignments')
+			.exec(function(err, result) {
+				var allAssign = result.assignments;
+				sendJsonResponse(res, 200, allAssign);
 			});
+			return;
 	} else {
 		sendJsonResponse(res, 404, {
 			"message": "No courseId in request"
@@ -160,38 +132,42 @@ module.exports.assignmentsDeleteOne = function (req, res) {
 	}
 	Cour
 		.findById(req.params.courseId)
-		.select('assignments')
+		//.select('assignments')
 		.exec(
-		function(err, course) {
-			if (!course) {
-				sendJsonResponse(res, 404, {
-					"message": "courseId not found"
-				});
-				return;
-			} else if (err) {
-				sendJsonResponse(res, 400, err);
-				return;
-			}
-			if (course.assignments && course.assignments.length > 0) {
-				if (!course.assignments.id(req.params.assignmentid)) {
+			function(err, course) {
+				//sendJsonResponse(res, 200, course);
+				//return;
+				var course = course.assignments;
+				console.log(course);
+				if (!course) {
 					sendJsonResponse(res, 404, {
-						"message": "assignmentid not found"
+						"message": "courseId not found"
 					});
+					return;
+				} else if (err) {
+					sendJsonResponse(res, 400, err);
+					return;
+				}
+				if (course.assignments && course.assignments.length > 0) {
+					if (!course.assignments.id(req.params.assignmentid)) {
+						sendJsonResponse(res, 404, {
+							"message": "assignmentid not found"
+						});
+					} else {
+						course.reviews.id(req.params.assignmentid).remove();
+						course.save(function(err) {
+							if (err) {
+								sendJsonResponse(res, 404, err);
+							} else {
+								sendJsonResponse(res, 204, null);
+							}
+						});
+					}
 				} else {
-					course.reviews.id(req.params.assignmentid).remove();
-					course.save(function(err) {
-						if (err) {
-							sendJsonResponse(res, 404, err);
-						} else {
-							sendJsonResponse(res, 204, null);
-						}
+					sendJsonResponse(res, 404, {
+						"message": "No assignment to delete"
 					});
 				}
-			} else {
-				sendJsonResponse(res, 404, {
-					"message": "No assignment to delete"
-				});
 			}
-		}
-	);
+		);
 };	
