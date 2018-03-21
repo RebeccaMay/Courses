@@ -132,12 +132,10 @@ module.exports.assignmentsDeleteOne = function (req, res) {
 	}
 	Cour
 		.findById(req.params.courseId)
-		//.select('assignments')
+		.select('assignments')
 		.exec(
 			function(err, course) {
-				//sendJsonResponse(res, 200, course);
-				//return;
-				var course = course.assignments;
+				console.log(err);
 				console.log(course);
 				if (!course) {
 					sendJsonResponse(res, 404, {
@@ -154,7 +152,7 @@ module.exports.assignmentsDeleteOne = function (req, res) {
 							"message": "assignmentid not found"
 						});
 					} else {
-						course.reviews.id(req.params.assignmentid).remove();
+						course.assignments.id(req.params.assignmentid).remove();
 						course.save(function(err) {
 							if (err) {
 								sendJsonResponse(res, 404, err);
