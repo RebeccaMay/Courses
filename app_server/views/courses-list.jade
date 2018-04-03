@@ -10,11 +10,12 @@ block content
 					small &nbsp; #{pageHeader.strapline}
 	.row
 		.col-xs-12.col-sm-8
+			.error= message
 			.row.list-group
 				each c in courselist
 					.col-xs-12.list-group-item(style="background-color:#FFFFFF;color:#000000;margin:5px;")
 						h4
-							a(href="/course")= c.courseId
+							a(href="/course/#{c._id}")= c.courseId
 							small &nbsp; #{c.professor}
 						p #{c.courseName}
 					.col-xs-12.col-sm-4

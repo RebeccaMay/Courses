@@ -7,13 +7,25 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 var renderHomepage = function(req, res, responseBody){
+	console.log("homepage: " + responseBody);
+	var message;
+	if (!(responseBody instanceof Array)){
+		message = "API lookup error";
+		responseBody = [];
+	}
+	else{
+		if (!responseBody.length){
+			message = "No courses found";
+		}
+	}
 	res.render('courses-list', {
 		title: 'Course Organizer - all your assignments in one place',
 		pageHeader: {
 			title: 'Course Organizer',
 			strapline: 'All your assignments in one place!'
 		},
-		courselist: responseBody
+		courselist : responseBody,
+		message : message
 	});
 };
 
@@ -34,32 +46,37 @@ module.exports.homelist = function(req, res){
 	);
 };
 
-module.exports.courseInfo = function(req, res){
+var renderDetailPage = function (req, res, courseDetail){
+	console.log(courseDetail);
 	res.render('course-info', {
-		title: 'MATH-335 Course Info',
-		pageHeader: {title: 'MATH-335'},
-		courseInfo: {
-			courseId: 'MATH-335',
-			courseName: 'Introduction to Statistics',
-			professor: 'Ashlyn Munson',
-			times: 'MWF 9am, Alderson 162',
-			credits: '3'
+		title: courseDetail.courseName + "course info",
+		pageHeader: {title: courseDetail.courseId},
+ 		courseInfo: {
+			courseId: courseDetail.courseId,
+			courseName: courseDetail.courseName,
+			professor: courseDetail.professor,
+			times: courseDetail.courseTime[0].times,
+			credits: courseDetail.courseTime[0].credits
 		},
-		assignments: [{
-			hwName: 'HW1',
-			hwDescription: 'Chapter 1',
-			dueDate: 'Jan 17, 2018',
-			points: '20',
-			hwStatus: 'Graded'
-		},{
-			hwName: 'HW2',
-			hwDescription: 'Chapter 2',
-			dueDate: 'Jan 24, 2018',
-			points: '18',
-			hwStatus: 'Completed'
-		}
-		]
+ 		assignments: courseDetail.assignments
 	});
+};
+
+module.exports.courseInfo = function(req, res){
+	var requestOptions, path;
+	path = '/api/courses/' + req.params.courseId;
+	requestOptions = {
+		url : apiOptions.server + path,
+		method : "GET",
+		json : {},
+		qs: {}
+	};
+	request(
+		requestOptions,
+		function(err, response, body){
+			renderDetailPage(req, res, body);
+		}
+	);
 };
 
 module.exports.addHw = function(req, res){

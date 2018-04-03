@@ -20,7 +20,7 @@ module.exports.coursesList = function(req, res) {
 };
 
 
-module.exports.coursesReadOne = function(req, res) {
+module.exports.courseInfo = function(req, res) {
 	if (req.params && req.params.courseId) {
 		Cour
 			.findById(req.params.courseId)
