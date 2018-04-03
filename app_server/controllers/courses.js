@@ -161,6 +161,22 @@ module.exports.doAddHw = function(req, res){
 	}
 };
 
+module.exports.deleteAssignment = function(req, res){
+	var requestOptions, path;
+	path = "/api/courses/" + req.params.courseId + '/assignments/' + req.params.assignmentid;
+	requestOptions = {
+		url : apiOptions.server + path,
+		method : "DELETE",
+		json : {},
+		qs : {}
+	};
+	request(
+		requestOptions,
+		function(err, response, body){
+			res.redirect('/course/' + req.params.courseId);
+		}
+	);	
+};
 
 
 
