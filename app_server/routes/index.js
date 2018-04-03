@@ -6,7 +6,8 @@ var ctrlOthers = require('../controllers/others');
 /* Courses pages*/
 router.get('/', ctrlCourses.homelist);
 router.get('/course/:courseId', ctrlCourses.courseInfo);
-router.get('/course/hw/new', ctrlCourses.addHw);
+router.get('/course/:courseId/hw/new', ctrlCourses.addHw);
+router.post('/course/:courseId/hw/new', ctrlCourses.doAddHw);
 
 router.get('/about', ctrlOthers.about);
 

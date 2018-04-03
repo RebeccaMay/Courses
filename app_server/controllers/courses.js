@@ -56,7 +56,8 @@ var renderDetailPage = function (req, res, courseDetail){
 			courseName: courseDetail.courseName,
 			professor: courseDetail.professor,
 			times: courseDetail.courseTime[0].times,
-			credits: courseDetail.courseTime[0].credits
+			credits: courseDetail.courseTime[0].credits,
+			_id: courseDetail._id
 		},
  		assignments: courseDetail.assignments
 	});
@@ -79,7 +80,7 @@ var _showError = function (req, res, status){
 	});
 };
 
-module.exports.courseInfo = function(req, res){
+var getCourseInfo = function (req, res, callback){
 	var requestOptions, path;
 	path = '/api/courses/' + req.params.courseId;
 	requestOptions = {
@@ -92,19 +93,75 @@ module.exports.courseInfo = function(req, res){
 		requestOptions,
 		function(err, response, body){
 			if (response.statusCode === 200){
-				renderDetailPage(req, res, body);
+				callback(req, res, body);
 			}
 			else {
 				_showError(req, res, response.statusCode);
 			}
 		}
-	);
+	);	
 };
 
-module.exports.addHw = function(req, res){
+module.exports.courseInfo = function(req, res){
+	getCourseInfo(req, res, function(req, res, responseData){
+		renderDetailPage(req, res, responseData);
+	});
+};
+
+var renderHwForm = function (req, res, courseDetail){
 	res.render('course-hw-form', {
 		title: 'Add Assignment',
 		pageHeader: {title: 'Add Assignment'},
-		courseId: 'CSCI-446'
-		});
+		courseId: courseDetail.courseId,
+		error: req.query.err
+	});	
 };
+
+module.exports.addHw = function(req, res){
+	getCourseInfo(req, res, function(req, res, responseData){
+		renderHwForm(req, res, responseData);
+	});
+};
+
+module.exports.doAddHw = function(req, res){
+	var requestOptions, path, courseId, postdata;
+	courseId = req.params.courseId;
+	path = "/api/courses/" + courseId + '/assignments';
+	postdata = {
+		hwName : req.body.name,
+		hwDescription : req.body.description,
+		dueDate : req.body.due,
+		points : parseInt(req.body.points),
+		hwStatus : req.body.status
+	};
+	requestOptions = {
+		url : apiOptions.server + path,
+		method : "POST",
+		json : postdata
+	};
+	if (!postdata.hwName || !postdata.hwDescription || !postdata.dueDate || !postdata.points){
+		res.redirect('/course/' + courseId + '/hw/new?err=val');
+	}
+	else {
+		request(
+			requestOptions,
+			function(err, response, body){
+				if (response.statusCode === 201){
+					res.redirect('/course/' + courseId);
+				}
+				else if (response.statusCode === 400 && body.name && body.name === "ValidationError"){
+					res.redirect('/course/' + courseId + '/hw/new?err=val');
+				}
+				else {
+					console.log(body);
+					_showError(req, res, response.statusCode);
+				}
+			}
+		);
+	}
+};
+
+
+
+
+

@@ -22,6 +22,7 @@ var doAddAssignment = function(req, res, course) {
 		course.save(function(err, course) {
 			var thisAssignment;
 			if (err) {
+				console.log(err);
 				sendJsonResponse(res, 400, err);
 			} else {
 				thisAssignment = course.assignments[course.assignments.length - 1];

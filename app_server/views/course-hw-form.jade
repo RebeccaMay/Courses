@@ -3,10 +3,12 @@ extends layout
 block content
 	.row.page-header
 		.col-lg-12
-			h1 Add an Assignment for #{courseId}
+			h1 Your Assignment for #{courseId}
 	.row
 		.col-xs-12.col-md-6
-			form.form-horizontal(action="/course", method="get", role="form")
+			form.form-horizontal(action="", method="post", role="form")
+				- if (error == "val")
+					.alert.alert-danger(role="alert") Missing required field, please try again
 				.form-group
 					label.col-xs-10.col-sm-2.control-label(for="name") Name
 					.col-xs-12.col-sm-10
@@ -31,5 +33,5 @@ block content
 							Option In Progress
 							Option Completed
 							Option Graded
-				button.btn.btn-default.pull-right Add assignment
+				button.btn.btn-default.pull-right Submit
 			.col-xs-12.col-md-4

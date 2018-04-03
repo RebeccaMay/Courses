@@ -10,16 +10,17 @@ block content
 		p Instructor: #{courseInfo.professor}
 		p Credits: #{courseInfo.credits}
 		p When & Where: #{courseInfo.times}
-		a.btn(href='/course/hw/new') Add Assignment
+		a.btn(href="/course/#{courseInfo._id}/hw/new") Add Assignment
 		p
 	.row
 		each assignment in assignments
 			.col-xs-12.col-sm-8
 					.course
-						.col-xs-12
-							h4
+						.col-sm-12
+							h3
 								a #{assignment.hwName}
 								small &nbsp; #{assignment.hwDescription}
+								a.btn2.pull-right(href="/course/"+course._id +"/assignment/"+assignment._id + "/delete" ) Delete
 					.col-xs-12(style="background-color:#FFFFFF;color:#000000;border-radius:5px;")
 						p Due Date: #{assignment.dueDate}
 						p Points: #{assignment.points}
