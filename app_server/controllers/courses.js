@@ -61,7 +61,7 @@ var renderDetailPage = function (req, res, courseDetail){
 	});
 };
 
-var _showError = function (req, res, status){
+var _showError = function (req, res, status, err){
 	var title, content;
 	if (status === 404){
 		title = "404, page not found";
@@ -69,7 +69,7 @@ var _showError = function (req, res, status){
 	}
 	else {
 		title = status + ", something's gone wrong";
-		content = "Something, somewhere, has gone just a little bit wrong.";
+		content = "Something, somewhere, has gone just a little bit wrong." + err;
 	}
 	res.status(status);
 	res.render('generic-text', {

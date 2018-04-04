@@ -31,6 +31,7 @@ module.exports.courseInfo = function(req, res) {
 					});
 					return;
 				} else if (err) {
+					console.log(err)
 					sendJsonResponse(res, 404, err);
 					return;
 				}
