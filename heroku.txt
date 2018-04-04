@@ -1,0 +1,100 @@
+2018-04-04T19:31:41.925320+00:00 heroku[router]: at=info method=GET path="/" host=stormy-refuge-78946.herokuapp.com request_id=6f6ff7c5-8f27-42d3-abc8-821421df6170 fwd="138.67.204.163" dyno=web.1 connect=1ms service=975ms status=304 bytes=151 protocol=https
+2018-04-04T19:31:41.926247+00:00 app[web.1]: [0mGET / [36m304 [0m951.928 ms - -[0m
+2018-04-04T19:31:42.177589+00:00 heroku[router]: at=info method=GET path="/javascripts/jquery-1.11.1.min.js" host=stormy-refuge-78946.herokuapp.com request_id=9eadc4a3-af93-40e3-960b-766b7184b52c fwd="138.67.204.163" dyno=web.1 connect=0ms service=16ms status=304 bytes=239 protocol=https
+2018-04-04T19:31:42.262817+00:00 heroku[router]: at=info method=GET path="/bootstrap/js/bootstrap.min.js" host=stormy-refuge-78946.herokuapp.com request_id=d96f3fdb-9bd8-487c-93f4-c62dd805b108 fwd="138.67.204.163" dyno=web.1 connect=1ms service=10ms status=304 bytes=238 protocol=https
+2018-04-04T19:31:42.229105+00:00 heroku[router]: at=info method=GET path="/stylesheets/style.css" host=stormy-refuge-78946.herokuapp.com request_id=74abdf75-8fce-46cc-996e-4031d0a4bb37 fwd="138.67.204.163" dyno=web.1 connect=0ms service=7ms status=304 bytes=237 protocol=https
+2018-04-04T19:31:42.178512+00:00 app[web.1]: [0mGET /javascripts/jquery-1.11.1.min.js [36m304 [0m3.222 ms - -[0m
+2018-04-04T19:31:42.234988+00:00 app[web.1]: [0mGET /stylesheets/style.css [36m304 [0m1.143 ms - -[0m
+2018-04-04T19:31:42.257624+00:00 app[web.1]: [0mGET /bootstrap/css/amelia.bootstrap.css [36m304 [0m1.272 ms - -[0m
+2018-04-04T19:31:42.263258+00:00 app[web.1]: [0mGET /bootstrap/js/bootstrap.min.js [36m304 [0m6.482 ms - -[0m
+2018-04-04T19:31:42.256299+00:00 heroku[router]: at=info method=GET path="/bootstrap/css/amelia.bootstrap.css" host=stormy-refuge-78946.herokuapp.com request_id=7160f966-de2b-4a2d-9cb5-214908b28aaf fwd="138.67.204.163" dyno=web.1 connect=0ms service=6ms status=304 bytes=239 protocol=https
+2018-04-04T19:31:42.581289+00:00 app[web.1]: [0mGET /bootstrap/js/bootstrap.min.js.map [36m304 [0m1.322 ms - -[0m
+2018-04-04T19:31:42.580805+00:00 heroku[router]: at=info method=GET path="/bootstrap/js/bootstrap.min.js.map" host=stormy-refuge-78946.herokuapp.com request_id=ff671e27-153d-4ec1-8c47-6b821b656cc1 fwd="138.67.204.163" dyno=web.1 connect=0ms service=7ms status=304 bytes=239 protocol=https
+2018-04-04T19:32:19.020393+00:00 app[web.1]: [0mGET /api/courses/5ab00ad8a1dda12326c3cc8b [33m404 [0m20.036 ms - 32[0m
+2018-04-04T19:32:19.078419+00:00 app[web.1]: [0mGET /course/5ab00ad8a1dda12326c3cc8b [33m404 [0m105.617 ms - 1288[0m
+2018-04-04T19:32:19.021498+00:00 heroku[router]: at=info method=GET path="/api/courses/5ab00ad8a1dda12326c3cc8b" host=stormy-refuge-78946.herokuapp.com request_id=9b2cae27-0988-41ee-a1d2-ad6334bb0081 fwd="54.235.41.204" dyno=web.1 connect=2ms service=24ms status=404 bytes=246 protocol=https
+2018-04-04T19:32:19.077745+00:00 heroku[router]: at=info method=GET path="/course/5ab00ad8a1dda12326c3cc8b" host=stormy-refuge-78946.herokuapp.com request_id=69328b29-0052-4519-a2cc-84c312218622 fwd="138.67.204.163" dyno=web.1 connect=1ms service=109ms status=404 bytes=1498 protocol=https
+2018-04-04T19:32:19.271477+00:00 heroku[router]: at=info method=GET path="/bootstrap/css/amelia.bootstrap.css" host=stormy-refuge-78946.herokuapp.com request_id=c0357b17-90f2-434a-8b9c-67f254d4bfe3 fwd="138.67.204.163" dyno=web.1 connect=1ms service=11ms status=304 bytes=239 protocol=https
+2018-04-04T19:32:19.272176+00:00 heroku[router]: at=info method=GET path="/javascripts/jquery-1.11.1.min.js" host=stormy-refuge-78946.herokuapp.com request_id=816f6d0b-656f-4d8b-9c87-8d48f1184677 fwd="138.67.204.163" dyno=web.1 connect=0ms service=10ms status=304 bytes=239 protocol=https
+2018-04-04T19:32:19.331401+00:00 heroku[router]: at=info method=GET path="/bootstrap/js/bootstrap.min.js" host=stormy-refuge-78946.herokuapp.com request_id=4abf5bdb-09fc-421f-8a04-37c07baffffc fwd="138.67.204.163" dyno=web.1 connect=0ms service=13ms status=304 bytes=238 protocol=https
+2018-04-04T19:32:19.271927+00:00 app[web.1]: [0mGET /bootstrap/css/amelia.bootstrap.css [36m304 [0m7.435 ms - -[0m
+2018-04-04T19:32:19.272822+00:00 app[web.1]: [0mGET /javascripts/jquery-1.11.1.min.js [36m304 [0m7.081 ms - -[0m
+2018-04-04T19:32:19.273600+00:00 app[web.1]: [0mGET /stylesheets/style.css [36m304 [0m7.004 ms - -[0m
+2018-04-04T19:32:19.332092+00:00 app[web.1]: [0mGET /bootstrap/js/bootstrap.min.js [36m304 [0m9.342 ms - -[0m
+2018-04-04T19:32:19.272679+00:00 heroku[router]: at=info method=GET path="/stylesheets/style.css" host=stormy-refuge-78946.herokuapp.com request_id=66a5dc53-d03b-435a-8769-65df8364ccd2 fwd="138.67.204.163" dyno=web.1 connect=1ms service=11ms status=304 bytes=237 protocol=https
+2018-04-04T19:32:19.605489+00:00 heroku[router]: at=info method=GET path="/bootstrap/js/bootstrap.min.js.map" host=stormy-refuge-78946.herokuapp.com request_id=8d3fa4a0-a148-4473-a8f0-10e4cdda962f fwd="138.67.204.163" dyno=web.1 connect=0ms service=11ms status=304 bytes=239 protocol=https
+2018-04-04T19:32:19.606402+00:00 app[web.1]: [0mGET /bootstrap/js/bootstrap.min.js.map [36m304 [0m8.726 ms - -[0m
+2018-04-04T19:44:51.782150+00:00 heroku[router]: at=info method=GET path="/api/course/5ab00ad8a1dda12326c3cc8b" host=stormy-refuge-78946.herokuapp.com request_id=57ab2d29-0335-426d-85b9-f5fb147ab4bb fwd="138.67.204.163" dyno=web.1 connect=1ms service=33ms status=404 bytes=1292 protocol=https
+2018-04-04T19:44:51.781738+00:00 app[web.1]: [0mGET /api/course/5ab00ad8a1dda12326c3cc8b [33m404 [0m30.817 ms - 1082[0m
+2018-04-04T19:44:51.938279+00:00 app[web.1]: [0mGET /bootstrap/css/amelia.bootstrap.css [36m304 [0m0.767 ms - -[0m
+2018-04-04T19:44:51.998039+00:00 app[web.1]: [0mGET /stylesheets/style.css [36m304 [0m1.471 ms - -[0m
+2018-04-04T19:44:51.938763+00:00 heroku[router]: at=info method=GET path="/bootstrap/css/amelia.bootstrap.css" host=stormy-refuge-78946.herokuapp.com request_id=caaf4492-8526-4d7f-8235-5e79f897e8ad fwd="138.67.204.163" dyno=web.1 connect=1ms service=3ms status=304 bytes=239 protocol=https
+2018-04-04T19:44:52.047986+00:00 heroku[router]: at=info method=GET path="/bootstrap/js/bootstrap.min.js" host=stormy-refuge-78946.herokuapp.com request_id=cd99ea85-21c7-4a14-81d7-298f25f4008d fwd="138.67.204.163" dyno=web.1 connect=1ms service=3ms status=304 bytes=238 protocol=https
+2018-04-04T19:44:52.000765+00:00 heroku[router]: at=info method=GET path="/stylesheets/style.css" host=stormy-refuge-78946.herokuapp.com request_id=adce1020-7a3a-4207-8c1d-857bec98288a fwd="138.67.204.163" dyno=web.1 connect=1ms service=5ms status=304 bytes=237 protocol=https
+2018-04-04T19:44:52.047270+00:00 app[web.1]: [0mGET /bootstrap/js/bootstrap.min.js [36m304 [0m0.771 ms - -[0m
+2018-04-04T19:44:52.047741+00:00 app[web.1]: [0mGET /javascripts/jquery-1.11.1.min.js [36m304 [0m1.121 ms - -[0m
+2018-04-04T19:44:52.048228+00:00 heroku[router]: at=info method=GET path="/javascripts/jquery-1.11.1.min.js" host=stormy-refuge-78946.herokuapp.com request_id=79bbb7be-69e3-48a9-90d5-403e43673b3b fwd="138.67.204.163" dyno=web.1 connect=1ms service=4ms status=304 bytes=239 protocol=https
+2018-04-04T19:44:52.323901+00:00 heroku[router]: at=info method=GET path="/bootstrap/js/bootstrap.min.js.map" host=stormy-refuge-78946.herokuapp.com request_id=92f6d6a2-df65-4b84-b0e2-42a484d20c1e fwd="138.67.204.163" dyno=web.1 connect=1ms service=11ms status=304 bytes=239 protocol=https
+2018-04-04T19:44:52.323605+00:00 app[web.1]: [0mGET /bootstrap/js/bootstrap.min.js.map [36m304 [0m7.576 ms - -[0m
+2018-04-04T19:45:01.502491+00:00 heroku[router]: at=info method=GET path="/api/courses/5ab00ad8a1dda12326c3cc8b" host=stormy-refuge-78946.herokuapp.com request_id=5aef07b2-10a8-408f-a065-7346465665cb fwd="54.235.41.204" dyno=web.1 connect=1ms service=13ms status=404 bytes=246 protocol=https
+2018-04-04T19:45:01.612684+00:00 heroku[router]: at=info method=GET path="/bootstrap/js/bootstrap.min.js" host=stormy-refuge-78946.herokuapp.com request_id=ff9d300a-426c-45fa-83d8-522c2bb1adb6 fwd="138.67.204.163" dyno=web.1 connect=1ms service=8ms status=304 bytes=238 protocol=https
+2018-04-04T19:45:01.504373+00:00 app[web.1]: [0mGET /api/courses/5ab00ad8a1dda12326c3cc8b [33m404 [0m8.170 ms - 32[0m
+2018-04-04T19:45:01.508948+00:00 app[web.1]: [0mGET /course/5ab00ad8a1dda12326c3cc8b [33m404 [0m60.799 ms - 1288[0m
+2018-04-04T19:45:01.612628+00:00 app[web.1]: [0mGET /bootstrap/js/bootstrap.min.js [36m304 [0m3.357 ms - -[0m
+2018-04-04T19:45:01.621855+00:00 app[web.1]: [0mGET /bootstrap/css/amelia.bootstrap.css [36m304 [0m3.068 ms - -[0m
+2018-04-04T19:45:01.630550+00:00 app[web.1]: [0mGET /stylesheets/style.css [36m304 [0m4.420 ms - -[0m
+2018-04-04T19:45:01.633302+00:00 app[web.1]: [0mGET /javascripts/jquery-1.11.1.min.js [36m304 [0m3.185 ms - -[0m
+2018-04-04T19:45:01.521460+00:00 heroku[router]: at=info method=GET path="/course/5ab00ad8a1dda12326c3cc8b" host=stormy-refuge-78946.herokuapp.com request_id=edffefc5-582f-4bd5-963e-7da15ab30fe9 fwd="138.67.204.163" dyno=web.1 connect=21ms service=80ms status=404 bytes=1498 protocol=https
+2018-04-04T19:45:01.626232+00:00 heroku[router]: at=info method=GET path="/bootstrap/css/amelia.bootstrap.css" host=stormy-refuge-78946.herokuapp.com request_id=df3f06ad-35e0-4659-8ad5-f2a5b1b9c3df fwd="138.67.204.163" dyno=web.1 connect=9ms service=12ms status=304 bytes=239 protocol=https
+2018-04-04T19:45:01.644391+00:00 heroku[router]: at=info method=GET path="/javascripts/jquery-1.11.1.min.js" host=stormy-refuge-78946.herokuapp.com request_id=38a43f38-bc2b-476e-8a1c-6eb5b726d392 fwd="138.67.204.163" dyno=web.1 connect=12ms service=23ms status=304 bytes=239 protocol=https
+2018-04-04T19:45:01.641319+00:00 heroku[router]: at=info method=GET path="/stylesheets/style.css" host=stormy-refuge-78946.herokuapp.com request_id=2d70d5a6-fc41-484d-bb83-0581105ed87c fwd="138.67.204.163" dyno=web.1 connect=12ms service=20ms status=304 bytes=237 protocol=https
+2018-04-04T19:45:01.954394+00:00 heroku[router]: at=info method=GET path="/bootstrap/js/bootstrap.min.js.map" host=stormy-refuge-78946.herokuapp.com request_id=4b75c265-9b34-40b7-adca-2b054d2119d9 fwd="138.67.204.163" dyno=web.1 connect=10ms service=14ms status=304 bytes=239 protocol=https
+2018-04-04T19:45:01.947639+00:00 app[web.1]: [0mGET /bootstrap/js/bootstrap.min.js.map [36m304 [0m3.092 ms - -[0m
+2018-04-04T19:45:03.243158+00:00 heroku[router]: at=info method=GET path="/api/courses" host=stormy-refuge-78946.herokuapp.com request_id=01a432c3-6785-4476-ad27-260fb5db73f0 fwd="54.235.41.204" dyno=web.1 connect=0ms service=10ms status=200 bytes=1251 protocol=https
+2018-04-04T19:45:03.247631+00:00 heroku[router]: at=info method=GET path="/" host=stormy-refuge-78946.herokuapp.com request_id=b0c11d24-f91e-4605-9f89-ea825bf4e196 fwd="138.67.204.163" dyno=web.1 connect=1ms service=30ms status=304 bytes=151 protocol=https
+2018-04-04T19:45:03.330169+00:00 heroku[router]: at=info method=GET path="/javascripts/jquery-1.11.1.min.js" host=stormy-refuge-78946.herokuapp.com request_id=ac329644-ae21-49c1-890b-8ce21438f8ab fwd="138.67.204.163" dyno=web.1 connect=1ms service=4ms status=304 bytes=239 protocol=https
+2018-04-04T19:45:03.326177+00:00 heroku[router]: at=info method=GET path="/bootstrap/css/amelia.bootstrap.css" host=stormy-refuge-78946.herokuapp.com request_id=1d0be2ea-7eda-4571-8107-0700cae551e1 fwd="138.67.204.163" dyno=web.1 connect=1ms service=2ms status=304 bytes=239 protocol=https
+2018-04-04T19:45:03.334615+00:00 heroku[router]: at=info method=GET path="/bootstrap/js/bootstrap.min.js" host=stormy-refuge-78946.herokuapp.com request_id=ac3dcdb5-2584-443a-9790-7ee374e598af fwd="138.67.204.163" dyno=web.1 connect=1ms service=8ms status=304 bytes=238 protocol=https
+2018-04-04T19:45:03.244583+00:00 app[web.1]: [0mGET /api/courses [32m200 [0m9.181 ms - 1041[0m
+2018-04-04T19:45:03.247278+00:00 app[web.1]: [0mGET / [36m304 [0m25.986 ms - -[0m
+2018-04-04T19:45:03.325816+00:00 app[web.1]: [0mGET /bootstrap/css/amelia.bootstrap.css [36m304 [0m0.535 ms - -[0m
+2018-04-04T19:45:03.330278+00:00 app[web.1]: [0mGET /javascripts/jquery-1.11.1.min.js [36m304 [0m1.086 ms - -[0m
+2018-04-04T19:45:03.334571+00:00 app[web.1]: [0mGET /bootstrap/js/bootstrap.min.js [36m304 [0m5.491 ms - -[0m
+2018-04-04T19:45:03.327551+00:00 app[web.1]: [0mGET /stylesheets/style.css [36m304 [0m0.668 ms - -[0m
+2018-04-04T19:45:03.328121+00:00 heroku[router]: at=info method=GET path="/stylesheets/style.css" host=stormy-refuge-78946.herokuapp.com request_id=cb34abb7-e1fd-4477-befa-261140058c5b fwd="138.67.204.163" dyno=web.1 connect=1ms service=2ms status=304 bytes=237 protocol=https
+2018-04-04T19:45:03.623684+00:00 heroku[router]: at=info method=GET path="/bootstrap/js/bootstrap.min.js.map" host=stormy-refuge-78946.herokuapp.com request_id=27576c97-7bec-48e0-beff-b67a02cf9b75 fwd="138.67.204.163" dyno=web.1 connect=1ms service=3ms status=304 bytes=239 protocol=https
+2018-04-04T19:45:03.623634+00:00 app[web.1]: [0mGET /bootstrap/js/bootstrap.min.js.map [36m304 [0m0.380 ms - -[0m
+2018-04-04T20:01:33.067676+00:00 heroku[router]: at=info method=GET path="/course/5ab00ad8a1dda12326c3cc8b" host=stormy-refuge-78946.herokuapp.com request_id=38d2ffe6-48ae-40a0-9a19-e94c03839202 fwd="138.67.204.163" dyno=web.1 connect=0ms service=73ms status=404 bytes=1498 protocol=https
+2018-04-04T20:01:33.063475+00:00 heroku[router]: at=info method=GET path="/api/courses/5ab00ad8a1dda12326c3cc8b" host=stormy-refuge-78946.herokuapp.com request_id=63948f80-8d24-4215-9af1-334f9123f25d fwd="54.235.41.204" dyno=web.1 connect=1ms service=13ms status=404 bytes=246 protocol=https
+2018-04-04T20:01:33.062998+00:00 app[web.1]: [0mGET /api/courses/5ab00ad8a1dda12326c3cc8b [33m404 [0m8.764 ms - 32[0m
+2018-04-04T20:01:33.067251+00:00 app[web.1]: [0mGET /course/5ab00ad8a1dda12326c3cc8b [33m404 [0m71.495 ms - 1288[0m
+2018-04-04T20:01:33.263229+00:00 app[web.1]: [0mGET /bootstrap/css/amelia.bootstrap.css [36m304 [0m11.190 ms - -[0m
+2018-04-04T20:01:33.319523+00:00 heroku[router]: at=info method=GET path="/stylesheets/style.css" host=stormy-refuge-78946.herokuapp.com request_id=939ad6d4-0b98-4934-8939-4f4906dc6c81 fwd="138.67.204.163" dyno=web.1 connect=0ms service=8ms status=304 bytes=237 protocol=https
+2018-04-04T20:01:33.263912+00:00 heroku[router]: at=info method=GET path="/bootstrap/css/amelia.bootstrap.css" host=stormy-refuge-78946.herokuapp.com request_id=75905479-dab5-468d-8357-c1d04b3a7279 fwd="138.67.204.163" dyno=web.1 connect=0ms service=20ms status=304 bytes=239 protocol=https
+2018-04-04T20:01:33.336442+00:00 app[web.1]: [0mGET /javascripts/jquery-1.11.1.min.js [36m304 [0m0.498 ms - -[0m
+2018-04-04T20:01:33.319675+00:00 app[web.1]: [0mGET /stylesheets/style.css [36m304 [0m3.820 ms - -[0m
+2018-04-04T20:01:33.339696+00:00 app[web.1]: [0mGET /bootstrap/js/bootstrap.min.js [36m304 [0m0.989 ms - -[0m
+2018-04-04T20:01:33.339371+00:00 heroku[router]: at=info method=GET path="/javascripts/jquery-1.11.1.min.js" host=stormy-refuge-78946.herokuapp.com request_id=de7bcbd7-1c2d-4466-b23c-f2413e990140 fwd="138.67.204.163" dyno=web.1 connect=1ms service=4ms status=304 bytes=239 protocol=https
+2018-04-04T20:01:33.338281+00:00 heroku[router]: at=info method=GET path="/bootstrap/js/bootstrap.min.js" host=stormy-refuge-78946.herokuapp.com request_id=b1df7b05-4898-4d72-b201-0123502fc027 fwd="138.67.204.163" dyno=web.1 connect=1ms service=2ms status=304 bytes=238 protocol=https
+2018-04-04T20:01:33.599410+00:00 app[web.1]: [0mGET /bootstrap/js/bootstrap.min.js.map [36m304 [0m0.866 ms - -[0m
+2018-04-04T20:01:33.598129+00:00 heroku[router]: at=info method=GET path="/bootstrap/js/bootstrap.min.js.map" host=stormy-refuge-78946.herokuapp.com request_id=2513ddc0-fa23-49ec-bddf-799d55f46d3c fwd="138.67.204.163" dyno=web.1 connect=1ms service=4ms status=304 bytes=239 protocol=https
+2018-04-04T20:01:38.305684+00:00 heroku[router]: at=info method=GET path="/" host=stormy-refuge-78946.herokuapp.com request_id=3f47134e-e5f7-4be3-b337-cc9605fd716b fwd="138.67.204.163" dyno=web.1 connect=2ms service=50ms status=304 bytes=151 protocol=https
+2018-04-04T20:01:38.301994+00:00 app[web.1]: [0mGET /api/courses [32m200 [0m12.217 ms - 1041[0m
+2018-04-04T20:01:38.306981+00:00 app[web.1]: [0mGET / [36m304 [0m48.216 ms - -[0m
+2018-04-04T20:01:38.301492+00:00 heroku[router]: at=info method=GET path="/api/courses" host=stormy-refuge-78946.herokuapp.com request_id=55886361-29e7-4180-8684-61efe1c90112 fwd="54.235.41.204" dyno=web.1 connect=0ms service=17ms status=200 bytes=1251 protocol=https
+2018-04-04T20:01:38.577809+00:00 heroku[router]: at=info method=GET path="/bootstrap/css/amelia.bootstrap.css" host=stormy-refuge-78946.herokuapp.com request_id=85e06db8-b64b-4d52-bf39-f76bda1b8878 fwd="138.67.204.163" dyno=web.1 connect=2ms service=15ms status=304 bytes=239 protocol=https
+2018-04-04T20:01:38.580347+00:00 heroku[router]: at=info method=GET path="/stylesheets/style.css" host=stormy-refuge-78946.herokuapp.com request_id=b021202d-d448-4c33-962f-afc0fc18a975 fwd="138.67.204.163" dyno=web.1 connect=1ms service=14ms status=304 bytes=237 protocol=https
+2018-04-04T20:01:38.577100+00:00 heroku[router]: at=info method=GET path="/bootstrap/js/bootstrap.min.js" host=stormy-refuge-78946.herokuapp.com request_id=110f66df-599a-46b1-abe6-e20601af24bd fwd="138.67.204.163" dyno=web.1 connect=0ms service=14ms status=304 bytes=238 protocol=https
+2018-04-04T20:01:38.575826+00:00 app[web.1]: [0mGET /javascripts/jquery-1.11.1.min.js [36m304 [0m8.218 ms - -[0m
+2018-04-04T20:01:38.577245+00:00 app[web.1]: [0mGET /stylesheets/style.css [36m304 [0m8.960 ms - -[0m
+2018-04-04T20:01:38.578098+00:00 app[web.1]: [0mGET /bootstrap/js/bootstrap.min.js [36m304 [0m9.395 ms - -[0m
+2018-04-04T20:01:38.579146+00:00 app[web.1]: [0mGET /bootstrap/css/amelia.bootstrap.css [36m304 [0m3.519 ms - -[0m
+2018-04-04T20:01:38.575533+00:00 heroku[router]: at=info method=GET path="/javascripts/jquery-1.11.1.min.js" host=stormy-refuge-78946.herokuapp.com request_id=495b2492-3f9d-4e95-b02b-eeb588f85fa6 fwd="138.67.204.163" dyno=web.1 connect=0ms service=13ms status=304 bytes=239 protocol=https
+2018-04-04T20:01:38.873684+00:00 heroku[router]: at=info method=GET path="/bootstrap/js/bootstrap.min.js.map" host=stormy-refuge-78946.herokuapp.com request_id=67d3f82e-573c-45d5-8b43-5cf41bc70b3d fwd="138.67.204.163" dyno=web.1 connect=0ms service=1ms status=304 bytes=239 protocol=https
+2018-04-04T20:01:38.879121+00:00 app[web.1]: [0mGET /bootstrap/js/bootstrap.min.js.map [36m304 [0m0.496 ms - -[0m
+2018-04-04T20:36:29.829292+00:00 heroku[web.1]: Idling
+2018-04-04T20:36:29.829930+00:00 heroku[web.1]: State changed from up to down
+2018-04-04T20:36:31.345579+00:00 app[web.1]: Mongoose disconnected
+2018-04-04T20:36:31.355137+00:00 app[web.1]: Mongoose disconnected through Heroku app shutdown
+2018-04-04T20:36:31.324751+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2018-04-04T20:36:31.422523+00:00 heroku[web.1]: Process exited with status 143

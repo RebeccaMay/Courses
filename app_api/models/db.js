@@ -5,7 +5,7 @@ if (process.env.NODE_ENV === 'production') {
 	dbURI = 'mongodb://remay:csci446@ds213239.mlab.com:13239/heroku_1m8ld417';
 	//dbURI =  process.env.MONGOLAB_URI;
 }
-mongoose.connect(dbURI)
+mongoose.connect(dbURI);
 
 mongoose.connection.on('connected', function () {
 	console.log('Mongoose connected to ' + dbURI);
