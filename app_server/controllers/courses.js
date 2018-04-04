@@ -7,7 +7,6 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 var renderHomepage = function(req, res, responseBody){
-	console.log("homepage: " + responseBody);
 	var message;
 	if (!(responseBody instanceof Array)){
 		message = "API lookup error";
@@ -47,7 +46,6 @@ module.exports.homelist = function(req, res){
 };
 
 var renderDetailPage = function (req, res, courseDetail){
-	console.log(courseDetail);
 	res.render('course-info', {
 		title: courseDetail.courseName + "course info",
 		pageHeader: {title: courseDetail.courseId},
@@ -140,7 +138,10 @@ module.exports.doAddHw = function(req, res){
 		json : postdata
 	};
 	if (!postdata.hwName || !postdata.hwDescription || !postdata.dueDate || !postdata.points){
-		res.redirect('/course/' + courseId + '/hw/new?err=val');
+		res.redirect('/course/' + courseId + '/hw/new?err=val1');
+	}
+	else if (postdata.points < 0 || postdata.points > 100) {
+		res.redirect('/course/' + courseId + '/hw/new?err=val2');
 	}
 	else {
 		request(
@@ -177,6 +178,42 @@ module.exports.deleteAssignment = function(req, res){
 		}
 	);	
 };
+
+module.exports.courseInfoUnsubmitted = function(req, res){
+	getCourseInfo(req, res, function(req, res, responseData){
+		unsubmitted = [];
+		assignments = responseData.assignments;
+		for (var i = 0; i < assignments.length; i++){
+			if (assignments[i].hwStatus != "Submitted"){
+				unsubmitted.push(assignments[i]);
+			}
+		}
+		responseData.assignments = unsubmitted;
+		renderDetailPage(req, res, responseData);
+	});	
+};
+
+/* module.exports.assignmentsReadUnsubmitted = function(req, res){
+	var requestOptions, path;
+	path = '/api/courses/' + req.params.courseId + '/assignments/unsubmitted';
+	requestOptions = {
+		url : apiOptions.server + path,
+		method : "GET",
+		json : {},
+		qs: {}
+	};
+	request(
+		requestOptions,
+		function(err, response, body){
+			if (response.statusCode === 200){
+				renderDetailPage(req, res, body);
+			}
+			else {
+				_showError(req, res, response.statusCode);
+			}
+		}
+	);	
+}; */
 
 
 

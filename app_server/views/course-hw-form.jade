@@ -7,8 +7,11 @@ block content
 	.row
 		.col-xs-12.col-md-6
 			form.form-horizontal(action="", method="post", role="form")
-				- if (error == "val")
+				- if (error == "val1")
 					.alert.alert-danger(role="alert") Missing required field, please try again
+				- if (error == "val2")
+					.alert.alert-danger(role="alert") Points must be between 0 and 100
+				
 				.form-group
 					label.col-xs-10.col-sm-2.control-label(for="name") Name
 					.col-xs-12.col-sm-10
@@ -32,6 +35,6 @@ block content
 							Option Haven't started
 							Option In Progress
 							Option Completed
-							Option Graded
+							Option Submitted
 				button.btn.btn-default.pull-right Submit
 			.col-xs-12.col-md-4

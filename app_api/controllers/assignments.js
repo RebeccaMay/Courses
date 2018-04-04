@@ -73,6 +73,33 @@ module.exports.assignmentsReadAll = function (req, res) {
 	}		
 };
 
+/* module.exports.assignmentsReadUnsubmitted = function(req, res) {
+	if (req.params && req.params.courseId) {
+		var assignments = [];
+		Cour
+			.findById(req.params.courseId)
+			//.select('assignments')
+			.exec(function(err, result) {
+				console.log("results: " + result);
+				assignments = result.assignments;
+			});
+			console.log("assignments: " + assignments);
+			var unsubmitted = [];
+ 			for (var i = 0; i < assignments.length; i++){
+				if (assignments[i].hwStatus == "Haven't Started" || assignments[i].hwStatus == "In Progress"){
+					unsubmitted.push(assignments[i]);
+				}
+			}
+			console.log("unsubmitted " + unsubmitted); 
+			sendJsonResponse(res, 200, result.assignments);
+			return;
+	} else {
+		sendJsonResponse(res, 404, {
+			"message": "No courseId in request"
+		});
+	}
+}; */
+
 module.exports.assignmentsUpdateOne = function (req, res) {
 	if (!req.params.courseId || !req.params.assingmentid) {
 		sendJsonResponse(res, 404, {

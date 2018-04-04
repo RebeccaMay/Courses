@@ -11,6 +11,8 @@ block content
 		p Credits: #{courseInfo.credits}
 		p When & Where: #{courseInfo.times}
 		a.btn(href="/course/#{courseInfo._id}/hw/new") Add Assignment
+		a.btn(href="/course/#{courseInfo._id}/unsubmitted") Show Unsubmitted
+		a.btn(href="/course/#{courseInfo._id}") Show All 
 		p
 	.row
 		each assignment in assignments
@@ -26,3 +28,7 @@ block content
 						p Points: #{assignment.points}
 						p Status: #{assignment.hwStatus}
 					.col-xs-12.col-sm-4
+	.row
+		p
+		p
+	.row
