@@ -10,7 +10,6 @@ router.get('/course/:courseId/hw/new', ctrlCourses.addHw);
 router.post('/course/:courseId/hw/new', ctrlCourses.doAddHw);
 
 router.get('/course/:courseId/assignment/:assignmentid/delete', ctrlCourses.deleteAssignment);
-//router.get('/course/:courseId/assignments/unsubmitted', ctrlCourses.assignmentsReadUnsubmitted);
 router.get('/course/:courseId/unsubmitted', ctrlCourses.courseInfoUnsubmitted);
 router.get('/about', ctrlOthers.about);
 

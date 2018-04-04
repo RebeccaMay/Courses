@@ -73,33 +73,6 @@ module.exports.assignmentsReadAll = function (req, res) {
 	}		
 };
 
-/* module.exports.assignmentsReadUnsubmitted = function(req, res) {
-	if (req.params && req.params.courseId) {
-		var assignments = [];
-		Cour
-			.findById(req.params.courseId)
-			//.select('assignments')
-			.exec(function(err, result) {
-				console.log("results: " + result);
-				assignments = result.assignments;
-			});
-			console.log("assignments: " + assignments);
-			var unsubmitted = [];
- 			for (var i = 0; i < assignments.length; i++){
-				if (assignments[i].hwStatus == "Haven't Started" || assignments[i].hwStatus == "In Progress"){
-					unsubmitted.push(assignments[i]);
-				}
-			}
-			console.log("unsubmitted " + unsubmitted); 
-			sendJsonResponse(res, 200, result.assignments);
-			return;
-	} else {
-		sendJsonResponse(res, 404, {
-			"message": "No courseId in request"
-		});
-	}
-}; */
-
 module.exports.assignmentsUpdateOne = function (req, res) {
 	if (!req.params.courseId || !req.params.assingmentid) {
 		sendJsonResponse(res, 404, {
@@ -129,11 +102,11 @@ module.exports.assignmentsUpdateOne = function (req, res) {
 						"message": "assignment not found"
 					});
 				} else {
-					thisAssignment.hwName = req.body.hwName;
-					thisAssignment.hwDescription = req.body.hwDescription;
-					thisAssignment.dueDate = req.body.dueDate;
+					thisAssignment.hwName = req.body.name;
+					thisAssignment.hwDescription = req.body.description;
+					thisAssignment.dueDate = req.body.due;
 					thisAssignment.points = req.body.points;
-					thisAssignment.hwStatus = req.body.hwStatus;
+					thisAssignment.hwStatus = req.body.status;
 					course.save(function(err, course) {
 						if (err) {
 							sendJsonResponse(res, 404, err);

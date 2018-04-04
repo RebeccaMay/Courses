@@ -193,28 +193,6 @@ module.exports.courseInfoUnsubmitted = function(req, res){
 	});	
 };
 
-/* module.exports.assignmentsReadUnsubmitted = function(req, res){
-	var requestOptions, path;
-	path = '/api/courses/' + req.params.courseId + '/assignments/unsubmitted';
-	requestOptions = {
-		url : apiOptions.server + path,
-		method : "GET",
-		json : {},
-		qs: {}
-	};
-	request(
-		requestOptions,
-		function(err, response, body){
-			if (response.statusCode === 200){
-				renderDetailPage(req, res, body);
-			}
-			else {
-				_showError(req, res, response.statusCode);
-			}
-		}
-	);	
-}; */
-
 
 
 
