@@ -6,7 +6,7 @@ var ctrlAssignments = require('../controllers/assignments');
 
 // courses
 router.get('/courses', ctrlCourses.coursesList);
-router.get('/courses/:courseId', ctrlCourses.courseInfo);
+router.get('/courses/:courseId', ctrlCourses.courseInfoAPI);
 
 
 // asssignments
