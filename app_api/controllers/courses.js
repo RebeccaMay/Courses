@@ -26,19 +26,19 @@ module.exports.courseInfo = function(req, res) {
 			.findById(req.params.courseId)
 			.exec(function(err, course) {
 				if (!course) {
-					sendJsonResponse(res, 404, {
+					sendJsonResponse(res, 400, {
 						"message": "courseId not found"
 					});
 					return;
 				} else if (err) {
 					console.log(err)
-					sendJsonResponse(res, 404, err);
+					sendJsonResponse(res, 401, err);
 					return;
 				}
 			sendJsonResponse(res, 200, course);
 			});
 	} else {
-		sendJsonResponse(res, 404, {
+		sendJsonResponse(res, 402, {
 			"message": "No courseId in request"
 		});
 	}
